@@ -13,24 +13,42 @@ function SignInWithGoogle() {
     try {
       const provider = new GoogleAuthProvider()
 
-      signInWithPopup(auth, provider).then(async ({ user }) => {
-        const { email, displayName, photoURL } = user
-        if (user) {
-          await setDoc(doc(db, 'Users', user.uid), {
-            email,
-            firstName: displayName,
-            photo: photoURL,
-            lastName: '',
-          })
+      // signInWithPopup(auth, provider).then(async ({ user }) => {
+      //   const { email, displayName, photoURL } = user
+      //   if (user) {
+      //     await setDoc(doc(db, 'Users', user.uid), {
+      //       email,
+      //       firstName: displayName,
+      //       photo: photoURL,
+      //       lastName: '',
+      //     })
 
+      //     toast.success('User logged in Successfully', {
+      //       position: 'top-center',
+      //     })
+
+      //     navigate('/profile')
+      //   }
+      // })
+      signInWithPopup(auth, provider).then(async ({ user }) => {
+        const { email, displayName, photoURL } = user;
+        if (user) {
+          setDoc(doc(db, 'Users', user.uid), {
+            email,
+            firstName: displayName, // fix so that it's not the first and last name put together
+            photo: photoURL, // fix so there's place holder if no photo
+            lastName: '', // fix so last name actually shows up
+          });
+      
           toast.success('User logged in Successfully', {
             position: 'top-center',
-          })
-
-          navigate('/profile')
+          });
+      
+          navigate('/profile');
         }
-      })
+      });      
     } catch (error) {
+      console.error(error);
       toast.error(error.message, {
         position: 'bottom-center',
       })
