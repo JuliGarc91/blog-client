@@ -6,11 +6,12 @@ import { auth } from './helpers/firebase'
 
 import Login from './Components/Login'
 import SignUp from './Components/Register'
-import Profile from './Components/Profile'
+// import Profile from './Components/Profile'
 import Test from './Components/Test'
 
 import 'react-toastify/dist/ReactToastify.css'
 import './App.css'
+import UserProfile from './Components/UserProfile'
 
 function App() {
   const [user, setUser] = useState()
@@ -37,7 +38,7 @@ function App() {
         <Route path="/test" element={user ? <Test /> : <Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<SignUp />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<UserProfile />} />
       </Routes>
       <ToastContainer />
     </div>
