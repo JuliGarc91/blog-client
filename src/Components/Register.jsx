@@ -13,6 +13,7 @@ function Register() {
     password: '',
     firstName: '',
     lastName: '',
+    photo:'',
   })
 
   const navigate = useNavigate()
