@@ -34,19 +34,18 @@ const UserProfile = () => {
   }
 
   return (
-    <div className='flex justify-between text-black bg-black/10 p-4'>
-    <div className=''>
+    <div className='flex justify-between text-white bg-black/10'>
+    <div className='bg-zinc-500/80 border-zinc-950 p-1'>
       {console.log(placeHolder)}
-      {userData && userData.photoURL ? <img src={userData.photoURL} alt={'profile'} />: <img src={placeHolder} alt={'profile'}/>}
-      {/* <img src={userData.photoURL} alt={'profile'} /> */}
+      {userData && userData.photoURL ? <img src={userData.photoURL} alt={'profile'} className=''/>: <img src={placeHolder} alt={'profile'}/>}
       <p>Welcome, {userData.name}</p>
       {/* add conditional for non google users who use first name and lastname instead of name */}
       <p>Email: {userData.email}</p>
-      {/* Add more fields as per your Firestore schema */}
+      <button onClick={handleLogout} className=''>Log out</button>
     </div>
-    <div>
-    <button onClick={handleLogout} className='bg-zinc-950 border-1 border-zinc-500 text-white rounded-sm m-auto p-1'>Logout</button>
-    </div>
+    {/* <div>
+    <button onClick={handleLogout} className='bg-zinc-500/70 border-zinc-950 m-auto p-1'>Logout</button>
+    </div> */}
     </div>
   )
 }
