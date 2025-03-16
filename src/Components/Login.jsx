@@ -40,10 +40,12 @@ function Login() {
   }
 
   return (
-    <div className='grid justify-items-center'>
-    <div>
-      <h3>Login</h3>
-      <form onSubmit={handleSubmit} className='grid grid-cols-1'>
+    <>
+    {/* <div className='h-screen z-1'>
+      <img src="https://res.cloudinary.com/dzlpzgzkw/image/upload/v1742151043/DR-landscape_cz3rmm.jpg" alt='Jose Joaquin Holguin'/>
+    </div> */}
+    <div className='grid justify-items-center text-center z-2'>
+      <form onSubmit={handleSubmit} className='grid grid-cols-1 text-white'>
         <label htmlFor="email">
           Email Address:{' '}
           <input
@@ -68,12 +70,12 @@ function Login() {
           />
         </label>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Login</button>
       </form>
-      <Link to="/register">Register Here</Link>
+      <Link to="/register" className='bg-black text-white'>Register Here</Link>
       <SignInWithGoogle />
-      </div>
     </div>
+    </>
   )
 }
 
