@@ -34,8 +34,8 @@ const UserProfile = () => {
   }
 
   return (
-    <div className='grid justify-items-center text-center z-2 bg-[url(https://res.cloudinary.com/dzlpzgzkw/image/upload/v1742151539/nycha_vtyohm.jpg)] bg-cover bg-center'>
-      <h2>User Profile</h2>
+    <div className='flex justify-between text-black'>
+    <div className=''>
       {console.log(placeHolder)}
       {userData && userData.photoURL ? <img src={userData.photoURL} alt={'profile'} />: <img src={placeHolder} alt={'profile'}/>}
       {/* <img src={userData.photoURL} alt={'profile'} /> */}
@@ -43,7 +43,8 @@ const UserProfile = () => {
       {/* add conditional for non google users who use first name and lastname instead of name */}
       <p>Email: {userData.email}</p>
       {/* Add more fields as per your Firestore schema */}
-      <button onClick={handleLogout}>Logout</button>
+    </div>
+    <button onClick={handleLogout}>Logout</button>
     </div>
   )
 }

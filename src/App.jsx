@@ -21,7 +21,7 @@ function App() {
     })
   })
   return (
-    <div className='m-auto bg-[url(https://res.cloudinary.com/dzlpzgzkw/image/upload/v1742151043/DR-landscape_cz3rmm.jpg)] bg-cover bg-center text-white h-screen'>
+    <div className='bg-[url(https://res.cloudinary.com/dzlpzgzkw/image/upload/v1742151043/DR-landscape_cz3rmm.jpg)] bg-cover bg-center bg-fixed text-white h-screen'>
       <Routes
         style={{
           display: 'flex',
