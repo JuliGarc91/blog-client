@@ -35,7 +35,7 @@ const UserProfile = () => {
 
   return (
     <div className='fixed bottom-0 w-full flex justify-between text-white bg-black'>
-    <div className='flex align-middle gap-4 p-2'>
+    <div className='flex align-middle gap-4 p-4'>
       {/* {console.log(placeHolder)}
       {userData && userData.photoURL ? <img src={userData.photoURL} alt={'profile'} className=''/>: <img src={placeHolder} alt={'profile'}/>} */}
       {userData && userData.name ? <p>Welcome, {userData.name}</p> : <p>Welcome</p>}
@@ -43,8 +43,8 @@ const UserProfile = () => {
       <p>Email: {userData.email}</p>
       {/* <button onClick={handleLogout} className=''>Log out</button> */}
     </div>
-    <div className='flex align-middle pr-2'>
-    <button onClick={handleLogout} className=''>Log out</button>
+    <div className='flex align-middle p-2'>
+    <button onClick={handleLogout} className='hover:text-black hover:bg-white rounded-sm p-2'>Log out</button>
     </div>
     </div>
   )

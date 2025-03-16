@@ -41,8 +41,9 @@ function Login() {
 
   return (
     <>
-    <div className='shadow-xl shadow-black m-auto rounded-md w-[50vh] grid justify-items-center p-4 bg-[url(https://res.cloudinary.com/dzlpzgzkw/image/upload/v1742151539/subway_z4fswl.jpg)] bg-cover bg-center h-content'>
-      <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-2 bg-black/50 p-2 rounded-md'>
+    <div className='bottom-0 w-full fixed shadow-xl flex justify-center shadow-black p-4 gap-2 bg-black bg-cover bg-center h-content'>
+      {/* <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-2 bg-black/50 p-2 rounded-md'> */}
+      <form onSubmit={handleSubmit} className='flex gap-2 bg-black/50 rounded-md'>
         <label htmlFor="email">
           Email Address:{' '}
           <input
@@ -71,10 +72,10 @@ function Login() {
 
         <button type="submit" className='bg-zinc-950 border-1 border-zinc-500 p-1 rounded-sm'>Login</button>
         {/* <button className='bg-zinc-950 border-1 border-zinc-500 p-1 rounded-sm'><Link to="/register">Sign Up</Link></button> */}
+        
       </form>
-      <p className='shadow-sm text-zinc-950'>or</p>
       <SignInWithGoogle />
-    </div>
+      </div>
     </>
   )
 }
