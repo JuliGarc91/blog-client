@@ -70,7 +70,7 @@ function Login() {
         </label>
 
         <button type="submit" className='bg-zinc-950 border-1 border-zinc-500 p-1 rounded-sm'>Login</button>
-        <button className='bg-zinc-950 border-1 border-zinc-500 p-1 rounded-sm'><Link to="/register">Sign Up</Link></button>
+        {/* <button className='bg-zinc-950 border-1 border-zinc-500 p-1 rounded-sm'><Link to="/register">Sign Up</Link></button> */}
       </form>
       <p className='shadow-sm text-zinc-950'>or</p>
       <SignInWithGoogle />
