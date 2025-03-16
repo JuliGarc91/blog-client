@@ -36,7 +36,9 @@ const UserProfile = () => {
   return (
     <div>
       <h2>User Profile</h2>
-      {userData.photoURL ? <img src={userData.photoURL} alt={'profile'} />: <img src={placeHolder} alt={'profile'}/>} {/* Display user photo */}
+      {console.log(placeHolder)}
+      {userData && userData.photoURL ? <img src={userData.photoURL} alt={'profile'} />: <img src={placeHolder} alt={'profile'}/>}
+      {/* <img src={userData.photoURL} alt={'profile'} /> */}
       <p>Welcome, {userData.name}</p>
       {/* add conditional for non google users who use first name and lastname instead of name */}
       <p>Email: {userData.email}</p>

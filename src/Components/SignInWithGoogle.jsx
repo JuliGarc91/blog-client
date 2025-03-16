@@ -14,23 +14,6 @@ function SignInWithGoogle() {
     try {
       const provider = new GoogleAuthProvider()
 
-      // signInWithPopup(auth, provider).then(async ({ user }) => {
-      //   const { email, displayName, photoURL } = user
-      //   if (user) {
-      //     await setDoc(doc(db, 'Users', user.uid), {
-      //       email,
-      //       firstName: displayName,
-      //       photo: photoURL,
-      //       lastName: '',
-      //     })
-
-      //     toast.success('User logged in Successfully', {
-      //       position: 'top-center',
-      //     })
-
-      //     navigate('/profile')
-      //   }
-      // })
       signInWithPopup(auth, provider).then(async ({ user }) => {
         const { email, displayName, photoURL } = user;
         if (user) {

@@ -40,9 +40,10 @@ function Login() {
   }
 
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className='grid justify-items-center'>
+    <div>
       <h3>Login</h3>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='grid grid-cols-1'>
         <label htmlFor="email">
           Email Address:{' '}
           <input
@@ -69,11 +70,9 @@ function Login() {
 
         <button type="submit">Submit</button>
       </form>
-      <div>
-        New user <Link to="/register">Register Here</Link>
-        <p>--Or continue with--</p>
-      </div>
+      <Link to="/register">Register Here</Link>
       <SignInWithGoogle />
+      </div>
     </div>
   )
 }
