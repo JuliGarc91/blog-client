@@ -41,11 +41,8 @@ function Login() {
 
   return (
     <>
-    {/* <div className='h-screen z-1'>
-      <img src="https://res.cloudinary.com/dzlpzgzkw/image/upload/v1742151043/DR-landscape_cz3rmm.jpg" alt='Jose Joaquin Holguin'/>
-    </div> */}
-    <div className='grid justify-items-center text-center z-2'>
-      <form onSubmit={handleSubmit} className='grid grid-cols-1 text-white'>
+    <div className='m-auto rounded-xl w-[50vh] grid justify-items-center p-4 bg-[url(https://res.cloudinary.com/dzlpzgzkw/image/upload/v1742151539/subway_z4fswl.jpg)] bg-cover bg-center bg-fixed'>
+      <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-2'>
         <label htmlFor="email">
           Email Address:{' '}
           <input
@@ -55,6 +52,7 @@ function Login() {
             placeholder="Enter email"
             value={loginUser.email}
             onChange={handleChange}
+            className='bg-white text-black p-1 rounded-sm'
           />
         </label>
 
@@ -67,12 +65,13 @@ function Login() {
             placeholder="Enter password"
             value={loginUser.password}
             onChange={handleChange}
+            className='bg-white text-black p-1 rounded-sm'
           />
         </label>
 
         <button type="submit">Login</button>
       </form>
-      <Link to="/register" className='bg-black text-white'>Register Here</Link>
+      <Link to="/register">Register Here</Link>
       <SignInWithGoogle />
     </div>
     </>

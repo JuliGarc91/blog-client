@@ -34,7 +34,7 @@ const UserProfile = () => {
   }
 
   return (
-    <div>
+    <div className='grid justify-items-center text-center z-2 bg-[url(https://res.cloudinary.com/dzlpzgzkw/image/upload/v1742151539/nycha_vtyohm.jpg)] bg-cover bg-center'>
       <h2>User Profile</h2>
       {console.log(placeHolder)}
       {userData && userData.photoURL ? <img src={userData.photoURL} alt={'profile'} />: <img src={placeHolder} alt={'profile'}/>}
