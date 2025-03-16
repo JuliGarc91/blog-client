@@ -34,7 +34,7 @@ const UserProfile = () => {
   }
 
   return (
-    <div className='flex justify-between text-black'>
+    <div className='flex justify-between text-black bg-black/10 p-4'>
     <div className=''>
       {console.log(placeHolder)}
       {userData && userData.photoURL ? <img src={userData.photoURL} alt={'profile'} />: <img src={placeHolder} alt={'profile'}/>}
@@ -44,7 +44,9 @@ const UserProfile = () => {
       <p>Email: {userData.email}</p>
       {/* Add more fields as per your Firestore schema */}
     </div>
-    <button onClick={handleLogout}>Logout</button>
+    <div>
+    <button onClick={handleLogout} className='bg-zinc-950 border-1 border-zinc-500 text-white rounded-sm m-auto p-1'>Logout</button>
+    </div>
     </div>
   )
 }

@@ -68,10 +68,8 @@ function Register() {
     }
   }
   return (
-    <div style={{ textAlign: 'center' }}>
-      <form onSubmit={handleRegister}>
-        <h3>Sign Up</h3>
-        <div>
+    <div className='shadow-xl shadow-black m-auto rounded-xl w-[50vh] grid justify-items-center p-4 bg-[url(https://res.cloudinary.com/dzlpzgzkw/image/upload/v1742151539/subway_z4fswl.jpg)] bg-cover bg-center h-content text-white'>
+      <form onSubmit={handleRegister} className='grid grid-cols-1 gap-2'>
           <label htmlFor="firstName">
             First Name:{' '}
             <input
@@ -81,6 +79,7 @@ function Register() {
               placeholder="First name"
               value={newUser.firstName}
               onChange={handleChange}
+              className='bg-white text-black p-1 rounded-sm'
               required
             />
           </label>
@@ -94,6 +93,7 @@ function Register() {
               placeholder="Last name"
               value={newUser.lastName}
               onChange={handleChange}
+              className='bg-white text-black p-1 rounded-sm'
             />
           </label>
 
@@ -106,6 +106,7 @@ function Register() {
               placeholder="Enter email"
               value={newUser.email}
               onChange={handleChange}
+              className='bg-white text-black p-1 rounded-sm'
               required
             />
           </label>
@@ -119,17 +120,17 @@ function Register() {
               name="password"
               value={newUser.password}
               onChange={handleChange}
+              className='bg-white text-black p-1 rounded-sm'
               required
             />
           </label>
-
-          <button type="submit" style={{ width: 140 }}>
+          <button type="submit" className='bg-zinc-950 border-1 border-zinc-500 p-1 rounded-sm'>
             Sign Up
           </button>
-        </div>
-        <p>
-          Already registered <Link to="/login">Login</Link>
-        </p>
+          <p className='text-center'>
+            Already registered? 
+          </p>
+          <button className='bg-zinc-950 p-1 border-1 border-zinc-500 rounded-sm'><Link to="/login">Login</Link></button>
       </form>
     </div>
   )

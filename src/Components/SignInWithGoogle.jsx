@@ -72,10 +72,6 @@ function SignInWithGoogle() {
         <span className="gsi-material-button-contents">Continue with Google</span>
       </div>
     </button>
-    // <div style={{ cursor: 'pointer' }} onClick={googleLogin}>
-    //   <img src={googleBadge} width={'20%'} />
-    // </div>
-
   )
 }
 export default SignInWithGoogle
