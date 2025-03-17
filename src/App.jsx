@@ -1,17 +1,15 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
-
 import { auth } from './helpers/firebase'
-
 import Login from './Components/Login'
-import SignUp from './Components/Register'
-// import Profile from './Components/Profile'
+import UserProfile from './Components/UserProfile'
+// import SignUp from './Components/Register' // uncomment sign up component and enable user creation in firebase to enable user registration feature
 import Test from './Components/Test'
 
 import 'react-toastify/dist/ReactToastify.css'
 import './App.css'
-import UserProfile from './Components/UserProfile'
+
 
 function App() {
   const [user, setUser] = useState()
@@ -22,7 +20,6 @@ function App() {
   })
   return (
     <div>
-    {/* <div className='bg-[url(https://res.cloudinary.com/dzlpzgzkw/image/upload/v1742151043/DR-landscape_cz3rmm.jpg)] bg-cover bg-center bg-fixed text-white h-screen'> */}
       <Routes
         style={{
           display: 'flex',
