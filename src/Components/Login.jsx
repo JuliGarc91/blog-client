@@ -42,7 +42,6 @@ function Login() {
   return (
     <>
     <div className='bottom-0 w-full fixed shadow-xl flex justify-center shadow-black p-4 gap-2 bg-black bg-cover bg-center h-content'>
-      {/* <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-2 bg-black/50 p-2 rounded-md'> */}
       <form onSubmit={handleSubmit} className='flex gap-2 bg-black/50 rounded-md'>
         <label htmlFor="email">
           Email Address:{' '}
@@ -56,7 +55,6 @@ function Login() {
             className='bg-white text-black p-1 rounded-sm'
           />
         </label>
-
         <label htmlFor="password">
           Password:{' '}
           <input
@@ -69,14 +67,11 @@ function Login() {
             className='bg-white text-black p-1 rounded-sm'
           />
         </label>
-
         <button type="submit" className='bg-zinc-950 border-1 border-zinc-500 p-1 rounded-sm'>Login</button>
-        {/* <button className='bg-zinc-950 border-1 border-zinc-500 p-1 rounded-sm'><Link to="/register">Sign Up</Link></button> */}
-        
       </form>
       <SignInWithGoogle />
-      </div>
-    </>
+    </div>
+  </>
   )
 }
 

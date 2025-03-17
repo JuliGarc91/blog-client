@@ -1,18 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import fetchUserData from '../helpers/fetchUserData'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { logout } from '../helpers/logout'
-import placeHolder from '../assets/placeholder.png'
 
 const UserProfile = () => {
   const { userData, loading } = fetchUserData()
+  const [posts, setPosts] = useState([]);
   const navigate = useNavigate()
 
-  if (loading) return <div>Loading... <button onClick={handleLogout}>Logout</button></div>  // Loading state
-
-  if (!userData) return <div>No user data found!
-<button onClick={handleLogout}>Logout</button></div>  // No user data
+  if (loading) return <div className='bg-black/50 text-white w-full p-2 flex justify-center gap-2'><button onClick={handleLogout} className='p-2 hover:bg-white hover:text-black rounded-sm'>This may take a while... Click to go back</button></div>  // Loading state
+  if (!userData) return <div className='bg-red-800/80 w-full p-2 flex justify-center gap-2'><button onClick={handleLogout} className='p-2 hover:bg-white hover:text-black rounded-sm'>No user data found! Click to go back</button></div>  // No user data
 
 
   async function handleLogout() {
@@ -36,12 +34,8 @@ const UserProfile = () => {
   return (
     <div className='fixed bottom-0 w-full flex justify-between text-white bg-black'>
     <div className='flex align-middle gap-4 p-4'>
-      {/* {console.log(placeHolder)}
-      {userData && userData.photoURL ? <img src={userData.photoURL} alt={'profile'} className=''/>: <img src={placeHolder} alt={'profile'}/>} */}
       {userData && userData.name ? <p>Welcome, {userData.name}</p> : <p>Welcome</p>}
-      {/* add conditional for non google users who use first name and lastname instead of name */}
       <p>Email: {userData.email}</p>
-      {/* <button onClick={handleLogout} className=''>Log out</button> */}
     </div>
     <div className='flex align-middle p-2'>
     <button onClick={handleLogout} className='hover:text-black hover:bg-white rounded-sm p-2'>Log out</button>
