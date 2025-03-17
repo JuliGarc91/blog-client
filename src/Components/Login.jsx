@@ -67,7 +67,7 @@ function Login() {
             className='bg-white text-black p-1 rounded-sm'
           />
         </label>
-        <button type="submit" className='bg-zinc-950 border-1 border-zinc-500 p-1 rounded-sm'>Login</button>
+        <button type="submit" className='hover:bg-zinc-800 bg-zinc-950 border-1 border-zinc-500 p-1 rounded-sm'>Login</button>
       </form>
       <SignInWithGoogle />
     </div>
